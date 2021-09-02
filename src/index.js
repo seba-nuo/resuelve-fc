@@ -6,18 +6,14 @@ const port = 3000;
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.get("/api", (req, res) => {
-  res.json("Hello World!");
-});
-
 app.post("/api", (req, res) => {
-  const jugadores = req.body;
-  const updatedJugadores = computeSalary(jugadores);
-  res.json(updatedJugadores);
+  const Listajugadores = req.body;
+  const updatedListaJugadores = computeSalary(Listajugadores);
+  res.json(updatedListaJugadores);
 });
 
 const server = app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`App listening at http://localhost:${port}`);
 });
 
 module.exports = { server, app };
