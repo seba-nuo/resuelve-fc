@@ -46,7 +46,7 @@ Use this to compute the `sueldo_completo` from a object of football players like
    ]
 }
 ```
-| The response should be a the same object but with the `sueldo_completo` updated.
+> The response should be a the same object but with the `sueldo_completo` updated.
 
 
 ## How to test it
